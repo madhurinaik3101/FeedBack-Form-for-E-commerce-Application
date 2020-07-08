@@ -33,7 +33,7 @@
 			
 			<fieldset class="form-group">
 				<form:label path="email">Email</form:label>
-				<form:input path="email" type="text" class="form-control"
+				<form:input path="email" type="email" class="form-control"
 					required="required" />
 				<form:errors path="email" cssClass="text-warning" />
 			</fieldset>
