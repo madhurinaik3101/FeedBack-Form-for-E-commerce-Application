@@ -22,7 +22,13 @@ public class FeedBackController {
 	@PostMapping("/feedback")
 	public String addFeedBack(ModelMap model, @Valid FeedBack feedback, BindingResult result) {
 		
+		if(result.hasErrors()){
+		 	return "Error in submitting the form !.....Try Again !";
+		}
+		
+		else { 
 		service.addFeedBack(feedback.getFname(),feedback.getLname(), feedback.getEmail(), feedback.getAddress(),feedback.getProduct(),feedback.getValue(),feedback.getSati(),feedback.getPros(),feedback.getChanges());
 		return "Thanks for your feedback";
+		}
 	}
 }
