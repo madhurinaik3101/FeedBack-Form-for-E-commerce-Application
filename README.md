@@ -1,3 +1,3 @@
-# Project2
+# Feedback Form for E-Commerce Application
 
-FeedBack Form for E-commerce Application
+This Application is a Feedback Form created to record the User Experience of a E-Commerce Application.
