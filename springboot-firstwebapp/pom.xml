@@ -87,12 +87,12 @@
 		    <version>2.0.1.Final</version>
 		</dependency>
 
-		<dependency>
+<!-- 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter</artifactId>
 		    <version>5.9.3</version>
 		    <scope>test</scope>
-		</dependency>
+		</dependency> -->
 
 
 	</dependencies>
@@ -104,8 +104,22 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+		<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>3.0.0-M7</version>
+			    <configuration>
+			        <useModulePath>false</useModulePath> <!-- avoid JPMS issues on Java 9+ -->
+			    </configuration>
+			</plugin>
+
 		</plugins>
+
+			
 	</build>
+
+	
 
 
 </project>
