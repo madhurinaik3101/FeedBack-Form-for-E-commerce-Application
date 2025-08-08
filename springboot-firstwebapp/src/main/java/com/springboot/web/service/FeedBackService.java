@@ -22,7 +22,7 @@ public class FeedBackService {
 
     public void addFeedBack(String fname,String lname,String email, String address,String product,String value, String sati,String pros,String changes) {
         feedback.add(new FeedBack(fname,lname,email,address,product,value,sati,pros,changes));
-        repo.save(feedback);
+        repo.saveAll(feedback);
     }
 
    
